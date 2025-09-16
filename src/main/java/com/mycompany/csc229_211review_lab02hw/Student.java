@@ -4,13 +4,38 @@ package com.mycompany.csc229_211review_lab02hw;
  *
  * @author MoaathAlrajab
  */
-public class Student {
-	// ToDo 1: Make this class a child of Person
+public class Student extends Person{
+	double gpa = 0.0;
+	private String address;
+
+	// supers info to parent class person
+	public Student(String name,int age){
+		super(name,(short) age);
+	}
 	
-	// ToDo 2: Fix the resulting errors
+	// gets gpa
+	public double getGPA(){
+		return gpa;
+	}
+
+	// sets gpa
+	public void setGPA(double gpa){
+		this.gpa = gpa;
+	}
 	
-	// ToDo 3: Add a field for GPA and create setter and getter
+	@Override
+    public String getAddress() {
+        return address;
+    }
+
+    @Override
+    public void setAddress(String address) {
+        this.address = address;
+    }
 	
-	// ToDo 4: Add comments to your code
+	public String toString(Student s){
+		return "Student information:" + s.getName() + "," + s.getAge() + "," + s.getGPA();
+	}
+	
 
 }
